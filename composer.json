@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "MatinEbrahimii\\ToDo\\ToDoServiceProvider"
+                "MatinEbrahimii\\ToDo\\Providers\\ToDoServiceProvider"
             ]
         }
     }
