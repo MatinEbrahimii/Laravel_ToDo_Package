@@ -42,7 +42,6 @@ class LabelEloquentRepo
         try {
             $label = Label::create($data);
         } catch (\Exception $exception) {
-            dd($exception);
             return nullable(null);
         }
 

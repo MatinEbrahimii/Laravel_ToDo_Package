@@ -55,7 +55,6 @@ class TaskEloquentRepo
             DB::commit();
         } catch (\Exception $exception) {
             DB::rollBack();
-            dd($exception);
             return nullable(null);
         }
 
