@@ -49,7 +49,7 @@ class TaskController extends Controller
     public function update(TaskUpdateRequest $request)
     {
         $task = TaskRepository::findOne($request->id)->getOrSend(
-            [ResponderFacade::class, 'modelNotFound']
+            [ResponderFacade::class, 'notFound']
         );
 
         TaskRepository::update($task, [
@@ -63,7 +63,7 @@ class TaskController extends Controller
     public function changeStatus(TaskChangeStatusRequest $request)
     {
         $task = TaskRepository::findOne($request->id)->getOrSend(
-            [ResponderFacade::class, 'modelNotFound']
+            [ResponderFacade::class, 'notFound']
         );
 
         TaskRepository::update($task, [
@@ -89,7 +89,7 @@ class TaskController extends Controller
     public function addLabels(AddLabelRequest $request)
     {
         $task = TaskRepository::findOne($request->id)->getOrSend(
-            [ResponderFacade::class, 'modelNotFound']
+            [ResponderFacade::class, 'notFound']
         );
 
         $task = TaskRepository::addLabels($task, $request->labels);
@@ -104,7 +104,7 @@ class TaskController extends Controller
     public function assignLabels(AssignLabelRequest $request)
     {
         $task = TaskRepository::findOne($request->id)->getOrSend(
-            [ResponderFacade::class, 'modelNotFound']
+            [ResponderFacade::class, 'notFound']
         );
 
         $task = TaskRepository::assignLabelsWithId($task, $request->labels);

@@ -37,31 +37,4 @@ class LabelController extends Controller
 
         return ResponderFacade::success();
     }
-
-    // public function update(LabelUpdateRequest $request)
-    // {
-    //     $label = LabelRepository::findOne($request->id)->getOrSend(
-    //         [ResponderFacade::class, 'modelNotFound']
-    //     );
-
-    //     LabelRepository::update($label, [
-    //         'title' => $request->title,
-    //         'description' => $request->description
-    //     ]);
-
-    //     return ResponderFacade::send('updated_task', $label);
-    // }
-
-    // public function changeStatus(TaskChangeStatusRequest $request)
-    // {
-    //     $label = LabelRepository::findOne($request->id)->getOrSend(
-    //         [ResponderFacade::class, 'modelNotFound']
-    //     );
-
-    //     LabelRepository::update($label, [
-    //         'status' => $request->status
-    //     ]);
-
-    //     return ResponderFacade::send('updated_task', $label);
-    // }
 }
