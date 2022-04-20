@@ -23,7 +23,7 @@ class ToDoServiceProvider extends ServiceProvider
     {
         // $this->mergeConfigFrom(__DIR__.'/config/tokenized_login.php', 'tokenized_login');
 
-        
+
         if (app()->runningUnitTests()) {
             $notification = FakeNotificationSender::class;
         } else {
@@ -42,21 +42,21 @@ class ToDoServiceProvider extends ServiceProvider
             $this->defineRoutes();
         }
 
-        $base_todo_address =  strstr(__DIR__, '/Providers', true);
+        $base_todo_address =  strstr(__DIR__, DIRECTORY_SEPARATOR . 'Providers', true);
 
-        $this->loadMigrationsFrom($base_todo_address . '/database/migrations');
+        $this->loadMigrationsFrom($base_todo_address . DIRECTORY_SEPARATOR . 'database' . DIRECTORY_SEPARATOR . 'migrations');
 
         // $this->registerEloquentFactoriesFrom($base_todo_address . '/database/factories');
     }
 
     private function defineRoutes()
     {
-        $base_todo_address =  strstr(__DIR__, '/Providers', true);
+        $base_todo_address =  strstr(__DIR__, DIRECTORY_SEPARATOR . 'Providers', true);
 
         Route::prefix('api')
             ->middleware('api')
             ->namespace($this->namespace)
-            ->group($base_todo_address . '/routes.php');
+            ->group($base_todo_address . DIRECTORY_SEPARATOR . 'routes.php');
     }
 
     protected function registerEloquentFactoriesFrom($path)
