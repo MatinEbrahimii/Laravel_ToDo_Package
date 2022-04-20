@@ -17,7 +17,9 @@ Update auth middleware in App\Http\kernel.php in routeMiddleware array
 'auth' => \MatinEbrahimii\ToDo\Http\Middleware\Authenticate::class
 ```
 
-# Postman Documentation Link 
+#### * important point: /api/todo/tasks/{id}/changeStatus end-point will not work until the email server is configured
+
+# Postman api Documentation Link 
 https://documenter.getpostman.com/view/6655749/Uyr7Jyvh
 
 
