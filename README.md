@@ -11,7 +11,7 @@ Then run migrate command:
 php artisan migrate
 ```
 
-Add auth middleware to App\Http\kernel.php
+Update auth middleware in App\Http\kernel.php in routeMiddleware array
 
 ```
 'auth' => \MatinEbrahimii\ToDo\Http\Middleware\Authenticate::class
