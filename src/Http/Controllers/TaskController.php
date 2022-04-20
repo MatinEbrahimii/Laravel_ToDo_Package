@@ -5,7 +5,6 @@ namespace MatinEbrahimii\ToDo\Http\Controllers;
 use MatinEbrahimii\ToDo\Jobs\SendTaskNotifJob;
 use MatinEbrahimii\ToDo\Facades\ResponderFacade;
 use Illuminate\Routing\Controller;
-use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Auth;
 use MatinEbrahimii\ToDo\Facades\NotificationFacade;
 use MatinEbrahimii\ToDo\Http\Requests\Task\AddLabelRequest;

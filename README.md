@@ -14,10 +14,10 @@ php artisan migrate
 Add auth middleware to App\Http\kernel.php
 
 ```
-'auth' => \MatinEbrahimii\ToDo\Http\Middleware\Authenticate::class to kernel.php
+'auth' => \MatinEbrahimii\ToDo\Http\Middleware\Authenticate::class
 ```
 
-# Post Man Documentation Link 
+# Postman Documentation Link 
 https://documenter.getpostman.com/view/6655749/Uyr7Jyvh
 
 
